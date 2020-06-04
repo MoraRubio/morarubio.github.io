@@ -1,0 +1,9 @@
+body {
+  background-color: powderblue;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+header, div {
+  background-color: antiquewhite;
+}
