@@ -1,0 +1,9 @@
+body {
+    background-color: powderblue;
+}
+
+header {
+    background-color: antiquewhite;
+    border: 3px solid black;
+    text-align: center;
+}
