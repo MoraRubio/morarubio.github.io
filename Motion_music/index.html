@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Motion music</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Webcam access: https://github.com/bensonruan/webcam-easy-->
+        <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+        <!-- Handtracking: https://github.com/victordibia/handtrack.js-->
+        <script src="https://cdn.jsdelivr.net/npm/handtrackjs@latest/dist/handtrack.min.js"></script>
+        <!-- Audio library: howler.js-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.core.min.js"></script>
+    </head>
+
+    <body>
+
+        <h1>Motion music</h1>
+        <div class="container">
+            <div class="sound sound1">Clap</div>
+            <div class="sound sound2">Hi-Hat</div>
+            <div class="sound sound3">Kick</div>
+            <div class="sound sound4">Open-Hat</div>
+            <video id="webcam" autoplay playsinline width="640" height="480"></video>
+            <canvas id="canvas" class="d-none" width="640" height="480"></canvas>
+        </div>
+
+        <div class="button-container">
+            <div class="button">
+                <button onclick=start()>Start</button>
+                <button onclick=stopVideo()>Stop</button>
+            </div>
+
+            <div class="button">
+                <button onclick=startRecording()>Record</button>
+                <button onclick=stopRecording()>Stop rec.</button>
+                <button onclick=playRecording()>Play</button>
+            </div>
+        </div>
+
+        <audio class="sound1" src="sounds/clap.wav"></audio>
+        <audio class="sound2" src="sounds/hihat.wav"></audio>
+        <audio class="sound3" src="sounds/kick.wav"></audio>
+        <audio class="sound4" src="sounds/openhat.wav"></audio>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>
